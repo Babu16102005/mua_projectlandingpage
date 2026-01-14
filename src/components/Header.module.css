@@ -1,14 +1,11 @@
 .header {
   background-color: rgba(246, 240, 215, 0.95);
-  /* Cream with transparency */
   padding: 1rem 2rem;
   position: sticky;
   top: 0;
   z-index: 100;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  /* Smoother deep shadow */
   backdrop-filter: blur(10px);
-  /* Glass effect */
 }
 
 .headerContainer {
@@ -16,7 +13,6 @@
   margin: 0 auto;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   gap: 2rem;
 }
 
@@ -27,7 +23,7 @@
 }
 
 .nav {
-  display: block;
+  margin-left: auto;
 }
 
 .navList {
@@ -50,7 +46,6 @@
   display: flex;
   align-items: center;
   gap: 1.5rem;
-  /* Increased gap for better spacing */
 }
 
 .searchBox {
@@ -60,9 +55,6 @@
   border-radius: 50px;
   padding: 0.5rem 1.2rem;
   border: 2px solid rgba(197, 216, 157, 0.5);
-  /* Lighter green border */
-  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.03);
-  /* Inner shadow for depth */
 }
 
 .searchBox input {
@@ -76,8 +68,6 @@
 .searchBtn {
   background: none;
   color: var(--color-medium-green);
-  display: flex;
-  align-items: center;
 }
 
 .iconBtn {
@@ -85,26 +75,12 @@
   color: var(--color-text-dark);
   position: relative;
   padding: 0.5rem;
-  transition: color 0.3s ease;
-}
-
-.iconBtn:hover {
-  color: var(--color-dark-green);
 }
 
 .loginBtn {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
-  transition: background-color 0.3s ease;
-}
-
-.loginBtn:hover {
-  background-color: var(--color-light-green);
-  /* Subtle hover background */
-  color: var(--color-dark-green);
 }
 
 .loginText {
@@ -128,11 +104,108 @@
   justify-content: center;
 }
 
+/* ================= HAMBURGER ================= */
 
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.hamburger span {
+  width: 22px;
+  height: 2px;
+  background-color: var(--color-dark-green);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* ☰ → ✖ */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Smooth hover effect for Login / Sign Up button */
+.loginBtn {
+  transition: 
+    background-color 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.2s ease;
+    border-radius: 20px;
+
+}
+
+.loginBtn:hover {
+  background-color: var(--color-light-green);
+  box-shadow: 0 6px 15px rgba(137, 152, 109, 0.3);
+  transform: translateY(-2px);
+    border-radius: 20px;
+
+}
+
+/* Icon color on hover */
+.loginBtn:hover svg {
+  stroke: var(--color-dark-green);
+}
+
+/* Text color on hover */
+.loginBtn:hover .loginText {
+  color: var(--color-dark-green);
+}
+.loginBtn:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 8px rgba(137, 152, 109, 0.25);
+}
+/* ================= MOBILE ================= */
 
 @media (max-width: 900px) {
+
+  .hamburger {
+    display: flex;
+  }
+
   .nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(246, 240, 215, 0.98);
+    backdrop-filter: blur(10px);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  }
+
+  .navOpen {
+    max-height: 300px;
+  }
+
+  .navList {
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem 0;
+    gap: 1.2rem;
+  }
+
+  .loginText {
     display: none;
+  }
+
+  .headerContainer {
+    position: relative;
   }
 
   .searchBox input {
