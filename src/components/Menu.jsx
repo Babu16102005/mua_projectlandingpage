@@ -94,7 +94,7 @@ export default function Menu() {
                   <span className={styles.price}>{item.price}</span>
                 </div>
                 <p className={styles.description}>{item.description}</p>
-                <button className={styles.addButton}>Add to Plan</button>
+                <button className={styles.addButton}>Order Now</button>
               </div>
             </div>
           ))}

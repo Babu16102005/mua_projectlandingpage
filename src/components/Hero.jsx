@@ -13,7 +13,7 @@ export default function Hero() {
       <div className={styles.heroContainer}>
         <div className={styles.heroContent}>
           <div className={styles.tagline}>
-            <span className={styles.taglineIcon}>🌿</span>
+            <span className={styles.taglineIcon}>🍃</span>
             <span>Good Food Good Mood</span>
           </div>
 

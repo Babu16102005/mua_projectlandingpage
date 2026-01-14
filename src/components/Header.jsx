@@ -20,6 +20,7 @@ export default function Header() {
             <li><a href="#why-us" onClick={closeMenu}>Why us</a></li>
             <li><a href="#services" onClick={closeMenu}>Services</a></li>
             <li><a href="#menu" onClick={closeMenu}>Menu</a></li>
+            <li><a href="#kitchen" onClick={closeMenu}>Kitchen</a></li>
             <li><a href="#blog" onClick={closeMenu}>Blog</a></li>
             <li><a href="#contact" onClick={closeMenu}>Contact</a></li>
           </ul>
