@@ -1,0 +1,139 @@
+.section {
+  padding: 3rem 1rem; /* Reduced padding */
+  background-color: var(--color-cream);
+}
+
+.container {
+  max-width: 1000px; /* Constrain width */
+  margin: 0 auto;
+}
+
+.title {
+  text-align: center;
+  font-size: 2rem; /* Smaller title */
+  color: var(--color-dark-green);
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); /* Smaller cards */
+  gap: 1.5rem;
+}
+
+.card {
+  background-color: var(--color-white);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.imageContainer {
+  height: 160px; /* Reduced height */
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.card:hover .image {
+  transform: scale(1.05);
+}
+
+.content {
+  padding: 1rem; /* Reduced padding */
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.25rem;
+}
+
+.name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-text-dark);
+}
+
+.price {
+  font-weight: 700;
+  color: var(--color-dark-green);
+  font-size: 1rem;
+}
+
+.description {
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+  margin-bottom: 1rem;
+  line-height: 1.4;
+  height: 2.8em; /* Limit height roughly 2 lines */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.addButton {
+  width: 100%;
+  padding: 0.5rem; /* Smaller button */
+  background-color: transparent;
+  border: 1px solid var(--color-dark-green);
+  color: var(--color-dark-green);
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.addButton:hover {
+  background-color: var(--color-dark-green);
+  color: var(--color-white);
+}
+
+/* Pagination Styles */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+
+.pageBtn {
+  background-color: transparent;
+  border: 1px solid var(--color-dark-green);
+  color: var(--color-dark-green);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.pageBtn:hover:not(:disabled) {
+  background-color: var(--color-dark-green);
+  color: var(--color-white);
+}
+
+.pageBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  border-color: #ccc;
+  color: #ccc;
+}
+
+.pageInfo {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-text-dark);
+}

@@ -24,7 +24,7 @@ export default function Hero() {
 
           <p className={styles.heroDescription}>
             A moments of delivered on time and drive on the platform with the largest network of active food delivery
-            riders. Walafood is the best, its on time.
+            riders. Demo is the best, its on time.
           </p>
 
           <div className={styles.heroActions}>

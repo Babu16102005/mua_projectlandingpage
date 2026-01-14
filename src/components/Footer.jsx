@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className={styles.footer}>
       <div className={styles.footerContainer}>
         <div className={styles.footerBrand}>
-          <span className={styles.logoText}>Walafood</span>
+          <span className={styles.logoText}>Demo</span>
           <p className={styles.footerTagline}>Your favorite food, delivered fast and fresh.</p>
           <div className={styles.socialLinks}>
             <a href="#" className={styles.socialLink}>
@@ -81,7 +81,7 @@ export default function Footer() {
       </div>
 
       <div className={styles.footerBottom}>
-        <p>&copy; 2026 Walafood. All rights reserved.</p>
+        <p>&copy; 2026 Demo. All rights reserved.</p>
       </div>
     </footer>
   )

@@ -45,7 +45,7 @@
 .headerActions {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 1.5rem; /* Increased gap for better spacing */
 }
 
 .searchBox {
@@ -84,6 +84,26 @@
   color: var(--color-dark-green);
 }
 
+.loginBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.loginBtn:hover {
+  background-color: var(--color-light-green); /* Subtle hover background */
+  color: var(--color-dark-green);
+}
+
+.loginText {
+  font-size: 0.9rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
 .cartBadge {
   position: absolute;
   top: 0;
@@ -98,6 +118,8 @@
   align-items: center;
   justify-content: center;
 }
+
+
 
 @media (max-width: 900px) {
   .nav {

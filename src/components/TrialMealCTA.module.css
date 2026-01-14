@@ -1,0 +1,61 @@
+.section {
+  padding: 5rem 2rem;
+  background-color: var(--color-light-green);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Optional pattern or gradient overlay for "Pop" */
+.section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at top right, rgba(255, 255, 255, 0.3), transparent 60%);
+  pointer-events: none;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: var(--color-text-dark);
+  margin-bottom: 1.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.description {
+  font-size: 1.1rem;
+  color: var(--color-text-dark);
+  margin-bottom: 2.5rem;
+  opacity: 0.9;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ctaButton {
+  background-color: var(--color-text-dark);
+  color: var(--color-white);
+  padding: 1rem 3rem;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 5px 15px rgba(45, 58, 45, 0.3);
+}
+
+.ctaButton:hover {
+  transform: translateY(-3px);
+  background-color: #1a221a;
+  box-shadow: 0 8px 20px rgba(45, 58, 45, 0.4);
+}
