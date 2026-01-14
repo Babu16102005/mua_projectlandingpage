@@ -1,0 +1,44 @@
+/* Added custom color variables for food delivery landing page */
+:root {
+  --color-cream: #f6f0d7;
+  --color-light-green: #c5d89d;
+  --color-medium-green: #9cab84;
+  --color-dark-green: #89986d;
+  --color-text-dark: #2d3a2d;
+  --color-text-light: #5a6b5a;
+  --color-white: #ffffff;
+}
+
+/* Added global styles for the app */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--color-cream);
+  color: var(--color-text-dark);
+  line-height: 1.6;
+}
+
+.app {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+ul {
+  list-style: none;
+}
