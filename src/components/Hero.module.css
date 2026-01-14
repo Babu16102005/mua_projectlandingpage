@@ -2,7 +2,10 @@
   padding: 4rem 2rem;
   position: relative;
   overflow: hidden;
-  min-height: 80vh;
+  min-height: 90vh;
+  /* Taller hero */
+  display: flex;
+  align-items: center;
 }
 
 .heroDecoration {
@@ -17,39 +20,46 @@
 
 .waveLine {
   position: absolute;
-  width: 300px;
-  height: 100px;
-  border: 2px solid var(--color-light-green);
   border-radius: 50%;
-  opacity: 0.3;
+  opacity: 0.1;
+  filter: blur(40px);
+  z-index: -1;
 }
 
 .wave1 {
-  top: 10%;
-  left: 5%;
+  top: -10%;
+  left: -5%;
+  width: 500px;
+  height: 500px;
+  background: var(--color-light-green);
+  /* Reverted */
   transform: rotate(-20deg);
 }
 
 .wave2 {
-  top: 60%;
-  left: 10%;
-  width: 200px;
+  bottom: 10%;
+  right: -5%;
+  width: 400px;
+  height: 400px;
+  background: var(--color-medium-green);
+  /* Reverted */
   transform: rotate(30deg);
 }
 
 .dotsPattern {
   position: absolute;
-  top: 20%;
-  right: 45%;
-  width: 100px;
-  height: 100px;
+  top: 15%;
+  left: 50%;
+  width: 150px;
+  height: 150px;
   background-image: radial-gradient(var(--color-light-green) 2px, transparent 2px);
-  background-size: 15px 15px;
-  opacity: 0.5;
+  /* Reverted */
+  background-size: 20px 20px;
+  opacity: 0.2;
 }
 
 .heroContainer {
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -57,11 +67,12 @@
   gap: 4rem;
   position: relative;
   z-index: 1;
+  width: 100%;
 }
 
 .heroContent {
   flex: 1;
-  max-width: 550px;
+  max-width: 600px;
 }
 
 .tagline {
@@ -69,81 +80,104 @@
   align-items: center;
   gap: 0.5rem;
   background-color: var(--color-light-green);
+  /* Reverted */
   color: var(--color-dark-green);
-  padding: 0.4rem 1rem;
-  border-radius: 20px;
-  font-size: 0.85rem;
-  font-weight: 500;
+  /* Reverted */
+  padding: 0.5rem 1.2rem;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 600;
   margin-bottom: 1.5rem;
+  box-shadow: 0 4px 10px rgba(137, 152, 109, 0.2);
+  /* Green shadow */
 }
 
 .heroTitle {
-  font-size: 3.5rem;
+  font-size: 4rem;
   font-weight: 700;
-  line-height: 1.2;
+  line-height: 1.1;
   color: var(--color-text-dark);
   margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
 }
 
 .highlight {
   color: var(--color-dark-green);
+  /* Reverted */
 }
 
 .heroDescription {
   color: var(--color-text-light);
-  font-size: 1rem;
-  margin-bottom: 2rem;
-  max-width: 400px;
+  font-size: 1.1rem;
+  margin-bottom: 2.5rem;
+  max-width: 480px;
+  line-height: 1.8;
 }
 
 .heroActions {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
-  margin-bottom: 3rem;
+  gap: 2rem;
+  margin-bottom: 4rem;
 }
 
 .btnPrimary {
-  background-color: var(--color-dark-green);
+  background: var(--color-dark-green);
+  /* Reverted */
   color: var(--color-white);
-  padding: 0.9rem 2rem;
-  border-radius: 25px;
-  font-size: 1rem;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  font-size: 1.1rem;
   font-weight: 600;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: 0 8px 20px rgba(137, 152, 109, 0.4);
+  position: relative;
+  overflow: hidden;
 }
 
 .btnPrimary:hover {
-  background-color: var(--color-medium-green);
-  transform: translateY(-2px);
-  box-shadow: 0 5px 20px rgba(137, 152, 109, 0.4);
+  transform: translateY(-5px);
+  background: var(--color-medium-green);
+  box-shadow: 0 15px 30px rgba(137, 152, 109, 0.6);
 }
 
 .btnSecondary {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 1rem;
   background: none;
   color: var(--color-text-dark);
-  font-size: 1rem;
-  font-weight: 500;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: transform 0.2s;
+}
+
+.btnSecondary:hover {
+  transform: translateX(5px);
 }
 
 .playIcon {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   background-color: var(--color-white);
   border-radius: 50%;
-  box-shadow: 0 3px 15px rgba(137, 152, 109, 0.3);
+  box-shadow: var(--shadow-soft);
   color: var(--color-dark-green);
+  /* Reverted */
+  transition: all 0.3s ease;
+}
+
+.btnSecondary:hover .playIcon {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transform: scale(1.1);
 }
 
 .heroStats {
   display: flex;
-  gap: 3rem;
+  gap: 4rem;
 }
 
 .statItem {
@@ -152,82 +186,158 @@
 }
 
 .statNumber {
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-size: 1.8rem;
+  font-weight: 800;
   color: var(--color-text-dark);
 }
 
 .statLabel {
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   color: var(--color-text-light);
+  font-weight: 500;
 }
 
+/* Image 3D Effects */
 .heroImage {
   flex: 1;
   position: relative;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .imageCircle {
-  width: 450px;
-  height: 450px;
-  background: linear-gradient(135deg, var(--color-medium-green) 0%, var(--color-dark-green) 100%);
+  width: 500px;
+  height: 500px;
+  background: var(--color-medium-green);
+  /* Reverted */
+  background: linear-gradient(135deg, var(--color-light-green) 0%, var(--color-dark-green) 100%);
+  /* Green gradient */
   border-radius: 50%;
+  /* Start circle */
+  /* Blobby shape */
+  border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  overflow: hidden;
   position: relative;
+  box-shadow: var(--shadow-soft);
+  animation: blobFloat 8s ease-in-out infinite alternate;
+}
 
+@keyframes blobFloat {
+  0% {
+    border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+    transform: translateY(0);
+  }
+
+  100% {
+    border-radius: 58% 42% 30% 70% / 55% 55% 45% 45%;
+    transform: translateY(-10px);
+  }
 }
 
 .deliveryImage {
-  width: 90%;
+  width: 450px;
+  height: 450px;
+  padding: 5px;
+  background: var(--color-medium-green);
+  /* Reverted */
+  background: linear-gradient(135deg, var(--color-light-green) 0%, var(--color-dark-green) 100%);
+  /* Green gradient */
   border-radius: 50%;
-  height: auto;
+  /* Start circle */
+  /* Blobby shape */
+  border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: relative;
+  box-shadow: var(--shadow-soft);
+  animation: blobFloat 8s ease-in-out infinite alternate;
+  width: 90%;
+  height: 90%;
   object-fit: contain;
+  z-index: 2;
+  border-radius: 40px;
 }
 
+@keyframes blobFloat {
+  0% {
+    border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+    transform: translateY(0);
+  }
+
+  100% {
+    border-radius: 58% 42% 30% 70% / 55% 55% 45% 45%;
+    transform: translateY(-10px);
+  }
+}
+
+
+/* Floating Elements for 3D depth */
 .floatingHeart {
   position: absolute;
-  top: 15%;
-  right: 35%;
+  top: 10%;
+  left: 0;
   background-color: var(--color-white);
-  padding: 0.75rem;
-  border-radius: 50%;
-  box-shadow: 0 5px 20px rgba(137, 152, 109, 0.3);
-  animation: float 3s ease-in-out infinite;
+  padding: 0.8rem;
+  border-radius: 20px;
+  box-shadow: var(--shadow-card);
+  animation: float 4s ease-in-out infinite;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.floatingHeart::after {
+  content: 'Good Food';
+  /* Kept this as it matches the icon more than "Good Food Good Mood" which is long. Or could remove. User said "old content". I'll keep it as a UI label purely. */
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-text-dark);
 }
 
 @keyframes float {
+
   0%,
   100% {
     transform: translateY(0);
   }
+
   50% {
-    transform: translateY(-10px);
+    transform: translateY(-15px);
   }
 }
 
 .testimonialCard {
   position: absolute;
-  bottom: 15%;
-  right: 5%;
-  background-color: var(--color-white);
-  padding: 0.75rem 1rem;
-  border-radius: 30px;
+  bottom: 10%;
+  right: -20px;
+  /* Peeking out */
+  background-color: rgba(255, 255, 255, 0.95);
+  /* Glass-ish */
+  padding: 1rem 1.5rem;
+  border-radius: 20px;
   display: flex;
   align-items: center;
-  gap: 0.75rem;
-  box-shadow: 0 5px 25px rgba(137, 152, 109, 0.2);
+  gap: 1rem;
+  box-shadow: var(--shadow-card);
+  backdrop-filter: blur(10px);
+  z-index: 3;
+  animation: float 5s ease-in-out infinite reverse;
+  /* Float offset */
+  min-width: 220px;
 }
 
 .testimonialAvatar img {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   object-fit: cover;
+  border: 3px solid var(--color-white);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .testimonialInfo {
@@ -236,28 +346,36 @@
 }
 
 .testimonialName {
-  font-size: 0.85rem;
-  font-weight: 600;
+  font-size: 0.95rem;
+  font-weight: 700;
   color: var(--color-text-dark);
 }
 
 .testimonialStars {
   display: flex;
   gap: 2px;
+  color: var(--color-dark-green);
+  /* Reverted */
 }
 
+/* Responsive */
 @media (max-width: 1024px) {
   .heroContainer {
     flex-direction: column;
     text-align: center;
+    padding-top: 2rem;
   }
 
   .heroContent {
     max-width: 100%;
   }
 
+  .heroTitle {
+    font-size: 3rem;
+  }
+
   .heroDescription {
-    max-width: 100%;
+    margin: 0 auto 2.5rem;
   }
 
   .heroActions {
@@ -269,8 +387,9 @@
   }
 
   .imageCircle {
-    width: 350px;
-    height: 350px;
+    width: 400px;
+    height: 400px;
+    margin-top: 3rem;
   }
 }
 
@@ -280,11 +399,21 @@
   }
 
   .imageCircle {
-    width: 280px;
-    height: 280px;
+    width: 300px;
+    height: 300px;
   }
 
   .heroStats {
     gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .testimonialCard {
+    right: 0;
+    bottom: 0;
+    transform: scale(0.9);
   }
 }
+
+/*   padding-bottom: 25px;
+ */
